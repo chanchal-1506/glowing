@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <title>Glowing</title>
+</head>
+<body class="font-serif">
+
+    <header class=" z-50 bg-white shadow-md">
+        <div class="flex justify-between items-center px-4 md:px-8 py-4">
+            <!-- Left Section: Menu Icon & Search Bar -->
+            <div class="flex items-center gap-4">
+                <!-- Menu Icon (small screens) -->
+                <button onclick="openNav()" class="block md:hidden text-3xl">
+                    <i class='bx bx-menu'></i>
+                </button>
+    
+                <!-- Search Bar: Visible on md and larger -->
+                <div class="hidden md:flex items-center border border-gray-300 rounded-md px-3 py-1">
+                    <input type="text" placeholder="Search" class="focus:outline-none focus:ring-0 w-[200px] md:w-[200px]">
+                    <i class='bx bx-search text-gray-500'></i>
+                </div>
+            </div>
+    
+            <!-- Middle Section: Brand Name -->
+            <div>
+                <h1 class="text-[3rem] md:pr-14">GLOWING</h1>
+            </div>
+    
+            <!-- Right Section: User Icons -->
+            <div class="flex gap-4 text-2xl">
+                <a href="#"><i class='bx bxs-user'></i></a>
+                <a href="#" class="hidden md:block"><i class='bx bx-heart'></i></a>
+                <a href="#" class="hidden md:block"><i class='bx bx-shopping-bag'></i></a>
+            </div>
+        </div>
+    
+        <!-- Navigation Menu for md and Above -->
+        <nav class="hidden md:flex justify-center gap-12 text-lg ">
+            <a href="#home" class="hover:text-gray-600">Home</a>
+            <a href="#collection" class="hover:text-gray-600">Collection</a>
+            <a href="#shop" class="hover:text-gray-600">Shop</a>
+            <a href="#offer" class="hover:text-gray-600">Offer</a>
+            <a href="#blog" class="hover:text-gray-600">Blog</a>
+        </nav>
+    </header>
+    
+    <!-- Side Navbar (for Small Screens) -->
+    <div id="sideNav" class="fixed top-0 left-0 w-[40%] md:hidden h-screen bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+        <!-- Close Button -->
+        <div class="flex justify-between items-center px-6 py-4 border-b">
+            <h2 class="text-2xl font-bold">GLOWING</h2>
+            <button onclick="closeNav()" class="text-3xl">
+                <i class='bx bx-x'></i>
+            </button>
+        </div>
+    
+        
+    
+        <!-- Nav Links -->
+        <ul class="flex flex-col gap-6 text-xl p-6">
+            <li><a href="#home" class="hover:text-gray-600">Home</a></li>
+            <li><a href="#collection" class="hover:text-gray-600">Collection</a></li>
+            <li><a href="#shop" class="hover:text-gray-600">Shop</a></li>
+            <li><a href="#offer" class="hover:text-gray-600">Offer</a></li>
+            <li><a href="#blog" class="hover:text-gray-600">Blog</a></li>
+        </ul>
+    </div>
+
+<!-- ------------------Home------------------------------------ -->
+            <section class="container mx-auto h-[500px] w-[100%] sm:h-[400px] md:h-[550px] lg:h-[600px] font-serif  z-10" id="home">
+                <div class="bg-[url('img/hero-banner-1.jpg')] w-full h-full bg-cover bg-center">
+                    <div class="w-[60%] md:w-[40%] pt-16 pl-20">
+                        <h1 class="xl:text-[5rem] lg:text-[4rem] md:text-[2.5rem] sm:text-[2rem] text-[1.5rem] lg:leading-[5.5rem]">
+                            Reveal The Beauty of Skin
+                        </h1>
+                        <p class="lg:text-[1.5rem] text-[#AFAFAF] leading-relaxed pt-6">
+                            Made using clean, non-toxic ingredients, our products are designed for everyone
+                        </p>
+                        <h1 class="md:text-[1.5rem] text:[1rem] py-4">Starting at $7.99</h1>
+                        <button class="text-[1rem] text-white px-7 border border-black bg-black">Shop Now</button>
+                    </div>
+                </div>
+            </section>
+            
+
+    <section class="container mx-auto w-full md:h-[600px] h-[1380px] font-serif " id="collection">
+        <div class=" w-full h-full px-4 py-16 md:flex md:justify-between  grid gap-4  md:grid-cols-3">
+            <!-- First Image -->
+            <div class="bg-[url('./img/collection-1.jpg')] w-full md:w-[33%] md:h[80%] h-full bg-cover transition-transform duration-500 hover:scale-105 sm:px-10">
+                <h1 class="text-[2rem] pt-10 text-center">Summer Collection</h1>
+                <p class="pt-4 text-center">Starting at $17.99</p>
+                <p class="text-center mt-36 flex items-center">Shop Now <span class="text-[25px]"><i class='bx bx-right-arrow-alt'></i></span></p>
+            </div>
+            <!-- Second Image -->
+            <div class="bg-[url('./img/collection-2.jpg')] w-full  md:w-[33%] h-full bg-cover transition-transform duration-500 hover:scale-105">
+                <h1 class="text-[2rem] pt-10 text-center">What's New?</h1>
+                <p class="pt-4 text-center">Get the glow</p>
+                <p class="text-center mt-48 flex items-center">Discover now <span class="text-[25px]"><i class='bx bx-right-arrow-alt'></i></span></p>
+            </div>
+            <!-- Third Image -->
+            <div class="bg-[url('./img/collection-3.jpg')] w-full md:w-[33%] h-full bg-cover transition-transform duration-500 hover:scale-105">
+                <h1 class="text-[2rem] pt-10 text-center">Buy 1 Get 1</h1>
+                <p class="pt-4 text-center">Starting at $7.99</p>
+                <p class="text-center mt-48 flex items-center">Discover now <span class="text-[25px]"><i class='bx bx-right-arrow-alt'></i></span></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container mx-auto w-[100%] h-[2300px] sm:h-[2400px] md:h-[1500px] lg:h-[700px] font-serif  " id="shop">
+       <h1 class="text-[2.5rem] text-center">Our Bestsellers</h1>
+       <div class="lg:flex lg:justify-between grid gap-2   md:grid-cols-2 lg:h-[450px] h-[2200px]   mt-10 w-[100%] px-4 justify-center ">
+        <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[38%]   ">
+            <img src="img/product-01.jpg" class="h-full w-full">
+            <h1 class="text-center md:text-[1rem] text-[2rem] "><strike class="text-[#AFAFAF]">$39.00</strike>$29.00</h1>
+            <h1 class="text-center md:text-[1rem] text-[1.5rem] p-2">Facial cleanser</h1>
+        </div>
+        <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[38%]   mt-0 ">
+            <img src="img/product-02.jpg" class="h-full w-full">
+            <h1 class="text-center md:text-[1rem] text-[2rem] ">$29.00</h1>
+            <h1 class="text-center md:text-[1rem] text-[1.5rem]  p-2">Bio-shroom Rejuvenating Serum</h1>
+            
+        </div>
+        <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[60%]   md:-mt-[33rem] mt-0 lg:mt-0 ">
+            <img src="img/product-03.jpg" class="h-full w-full">
+            <h1 class="text-center md:text-[1rem] text-[2rem]  ">$29.00</h1>
+            <h1 class="text-center md:text-[1rem] text-[1.5rem] p-2">Coffee Bean Caffeine Eye Cream</h1>
+        </div>
+        <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[60%]   md:-mt-[33rem] mt-0 lg:mt-0  hidden md:block">
+            <img src="img/product-04.jpg" class="h-full w-full">
+            <h1 class="text-center md:text-[1rem] text-[2rem]  ">$29.00</h1>
+            <h1 class="text-center md:text-[1rem] text-[1.5rem] p-2">Facial cleanser</h1>
+        </div>
+        <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[60%]  md:-mt-[42rem] mt-0 lg:mt-0 hidden md:block">
+            <img src="img/product-05.jpg" class="h-full w-full">
+            <h1 class="text-center md:text-[1rem] text-[2rem]  "><strike class="text-[#AFAFAF]">$39.00</strike>$29.00</h1>
+            <h1 class="text-center md:text-[1rem] text-[1.5rem] p-2">Facial cleanser</h1>
+        </div>
+        
+       </div>
+    </section>
+
+
+    <section class="container mx-auto w-[100%]  h-[2400px] md:h-[1500px] lg:h-[700px] font-serif  sm:overflow-hidden " id=" ">
+        <h1 class="text-[2.5rem] text-center">Under $25</h1>
+        <div class="lg:flex lg:justify-between grid gap-2   md:grid-cols-2 lg:h-[450px] h-[2200px]   mt-10 w-[100%] px-4 justify-center ">
+         <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[38%]   ">
+             <img src="img/product-07.jpg" class="h-full w-full">
+             <h1 class="text-center md:text-[1rem] text-[2rem] "><strike class="text-[#AFAFAF]">$39.00</strike>$29.00</h1>
+             <h1 class="text-center md:text-[1rem] text-[1.5rem] p-2">Facial cleanser</h1>
+         </div>
+         <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[38%]   mt-0 ">
+             <img src="img/product-08.jpg" class="h-full w-full">
+             <h1 class="text-center md:text-[1rem] text-[2rem] ">$29.00</h1>
+             <h1 class="text-center md:text-[1rem] text-[1.5rem]  p-2">Bio-shroom Rejuvenating Serum</h1>
+             
+         </div>
+         <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[60%]   md:-mt-[33rem] mt-0 lg:mt-0 ">
+             <img src="img/product-09.jpg" class="h-full w-full">
+             <h1 class="text-center md:text-[1rem] text-[2rem]  ">$29.00</h1>
+             <h1 class="text-center md:text-[1rem] text-[1.5rem] p-2">Coffee Bean Caffeine Eye Cream</h1>
+         </div>
+         <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[60%]   md:-mt-[33rem] mt-0 lg:mt-0 hidden md:block">
+             <img src="img/product-10.jpg" class="h-full w-full">
+             <h1 class="text-center md:text-[1rem] text-[2rem]  ">$29.00</h1>
+             <h1 class="text-center md:text-[1rem] text-[1.5rem] p-2">Facial cleanser</h1>
+         </div>
+         <div class="h-[80%] w-[100%] lg:h-[80%] lg:w-[18%] md:w-[80%] md:h-[60%]  md:-mt-[42rem] mt-0 lg:mt-0 hidden md:block">
+             <img src="img/product-11.jpg" class="h-full w-full">
+             <h1 class="text-center md:text-[1rem] text-[2rem]  "><strike class="text-[#AFAFAF]">$39.00</strike>$29.00</h1>
+             <h1 class="text-center md:text-[1rem] text-[1.5rem] p-2">Facial cleanser</h1>
+         </div>
+         
+        </div>
+     </section>
+
+     <div class="container mx-auto w-[100%] h-[650px] lg:h-[500px] font-serif lg:flex lg:gap-4" id="offer">
+    <div class="lg:w-[70%] lg:h-[85%] md:w-[100%] md:h-[50%] bg-[url('./img/banner-1.jpg')] bg-cover object-cover ">
+       <h1 class="pl-10 pt-10 text-[1.5rem]">NEW COLLECTION</h1> 
+       <h1 class="pl-10 pt-2  text-[2.3rem]">Discover Our </h1>
+       <h1 class="pl-10 text-[2.3rem]">Autumn Skincare</h1>
+       <button class="m-10 px-5 py-3 bg-white text-black hover:bg-black hover:text-white rounded-lg ">Explore More</button>
+    </div>
+    <div class="lg:w-[30%] lg:h-[85%] md:w-[100%] md:h-[45%] bg-[url('./img/banner-2.jpg')] bg-cover mt-4 sm:mt-4 md:mt-7 lg:mt-0 ">
+        <h1 class="pl-10 pt-10 text-[1.5rem]">25% Off Everything</h1> 
+        <h1 class="pl-10 pt-2 mr-36 ">Makeup with extended range in colors for every human. </h1>
+        <button class="m-10 px-5 py-3 bg-white text-black hover:bg-black hover:text-white rounded-lg ">Shop Sale</button>
+     </div>
+    </div>
+
+    
+    <section class="w-[100%] h-[600px] md:h-[750px] font-serif ">
+        <h1 class="text-center text-[1.5rem] lg:text-[3rem] md:text-[3rem] sm:text-[2rem]">Why Shop with Glowing?</h1>
+        <div class="lg:flex lg:justify-between lg:gap-4 mt-10 w-[100%] h-[80%]  p-10" >
+        <div class="lg:w-[30%] md:w-[100%] sm:w-[100%] w-[100%] text-center  flex flex-col  items-center">
+            <img src="img/feature-1.jpg" class="h-[100px] sm:h-[100px] md:h-[150px] lg:h-[300px]">
+            <h1 class=" md:pt-0 sm:pt-4  lg:pt-10 pt-4 md:text-[1.2rem] lg:text-[1.7rem] ">Guaranteed PURE</h1>
+            <p class="text-[#AFAFAF] m-6 hidden lg:block">All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients </p>
+        </div>
+        <div class="lg:w-[30%]  md:w-[100%] sm:w-[100%] w-[100%] text-center  flex flex-col items-center"  >
+            <img src="img/feature-2.jpg" class=" h-[100px] sm:h-[100px] md:h-[150px] lg:h-[300px]">
+            <h1 class=" md:pt-0 sm:pt-4 lg:pt-10 pt-4  md:text-[1.2rem]  lg:text-[1.7rem]">Completely Cruelty-Free</h1>
+            <p class="text-[#AFAFAF] m-6 hidden lg:block">All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients </p>
+        </div>
+        <div class="lg:w-[30%]  md:w-[100%] sm:w-[100%] w-[100%] text-center  flex flex-col items-center">
+            <img src="img/feature-3.jpg" class="h-[100px] sm:h-[100px] md:h-[150px] lg:h-[300px]">
+            <h1 class="md:pt-0 sm:pt-4 lg:pt-10 pt-4  md:text-[1.2rem]  lg:text-[1.7rem]">Ingredient Sourcing</h1>
+            <p class="text-[#AFAFAF] m-6 hidden lg:block">All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients </p>
+        </div>
+    </div>
+    </section>
+
+    <section class=" container mx-auto w-[100%] lg:h-[700px] md:h-[700px] font-serif lg:flex lg:justify-between " >
+        <div class=" md:w-[100%] md:h-[63%] lg:h-[80%] lg:w-[58%] h-[80%]  flex justify-center  ">
+        <div class="lg:w-[30%] lg:h-[70%] bg-cover pt-20 ">
+            <img src="img/offer-banner-1.jpg " class="md:h-[250px] sm:h-[180px]">
+        </div>
+        <div class="lg:w-[60%] h-[80%] pl-10">
+            <img src="img/offer-banner-2.jpg" class="lg:w-[80%] lg:h-[500px] md:h-[400px] sm:h-[350px]">
+        </div>
+    </div>
+        <div class=" my-12 sm:my-12 md:my-0  md:w-[100%]  lg:w-[36%] lg:h-[60%]  lg:my-16 lg:mr-20 lg:py-20 md:flex md:flex-col md:items-center  sm:flex sm:flex-col sm:items-center bg-[#ECECEC]">
+            <h1 class="text-[1.2rem] pt-4 sm:pt-4 lg:pt-0">Special Offer <span><button class="px-4 bg-green-900 text-white">-20%</button></span></h1>
+            <h1 class="md:text-[3rem] sm:text-[2rem] text-[2rem] ">Mountain Pine Bath Oil</h1>
+            <p class="text-[#AFAFAF] ">Made using clean, non-toxic ingredients, our products are designed for everyone. </p>
+            <button class="my-8 px-5 py-3 hover:bg-white hover:text-black bg-black text-white rounded-lg hover:border hover:border-black">Get Only $39.00</button>
+        </div>
+
+    </section>
+
+    <section class="container mx-auto w-[100%] md:h-[490px] lg:h-[600px] font-serif " id="blog">
+        <h1 class="text-center text-[2.5rem] md:text-[3rem]">More to Discover</h1>
+        <div class="flex justify-between gap-4 mt-10 w-[100%] h-[70%]  p-10" >
+        <div class="w-[30%] text-center  flex flex-col items-center ">
+            <img src="img/blog-1.jpg" class=" transition-transform duration-500 hover:scale-105">
+            <h1 class="pt-10 md:text-[2rem]">Find a store</h1>
+            
+        </div>
+        <div class="w-[30%] text-center  flex flex-col items-center  transition-transform duration-500 hover:scale-105"  >
+            <img src="img/blog-2.jpg" class=" transition-transform duration-500 hover:scale-105" >
+            <h1 class="pt-10 md:text-[2rem]">From Our Blog</h1>
+            
+        </div>
+        <div class="w-[30%] text-center  flex flex-col items-center">
+            <img src="img/blog-3.jpg" class=" transition-transform duration-500 hover:scale-105">
+            <h1 class="pt-10 md:text-[2rem]">Our Story</h1>
+            
+        </div>
+    </div>
+    </section>
+
+    <section class="container mx-auto w-[100%] sm:h-[900px] md:h-[1100px] lg:h-[500px] font-serif bg-[#F7F7F7] text-[#AFAFAF] text-center">
+        <div class="lg:flex lg:justify-between leading-7 md:leading-10 pt-16 md:text-[13px] xl:text-[16px]">
+            <ul class="">
+                <li class="text-[1.5rem] text-black leading-10 lg:pl-0 ">Company</li>
+                <li>Find a location nearest you</li>
+                <li>See Our Store</li>
+                <li>+391 (0)35 2568 4593</li>
+                <li>hello@domain.com</li>
+            </ul>
+
+            <ul class="">
+                <li class="text-[1.5rem] text-black leading-10 lg:pl-0 ">Useful links</li>
+                <li>New Products</li>
+                <li>Best Sellers</li>
+                <li>Bundle & Save</li>
+                <li>Online Gift Cart</li>
+            </ul>
+
+            <ul class="">
+                <li class="text-[1.5rem] text-black leading-10 lg:pl-0 ">Information</li>
+                <li>Start a Return</li>
+                <li>Contact Us</li>
+                <li>shipping FAQ</li>
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+            </ul>
+
+            <ul class="">
+                <li class="text-[1.5rem] text-black leading-10 lg:pl-0 ">Good emails.</li>
+                <li>Enter your email below to be the first to know about new collections and product launches. </li>
+                <li class="mt-10"><input type="text" placeholder="Enter Email" class=" px-6 border border-black"><span><button class=" px-6  hover:bg-grey-400 bg-black text-white  hover:border hover:border-black">Subscribe</button></span></li>
+            </ul>
+
+        </div>
+
+        <footer class="  lg:flex lg:justify-between lg:gap-2 pt-10">
+            <a href="" class=" md:pt-10">@2024chanchaladhao <span class="text-black text-[1.3rem]"><i class='bx bxl-twitter'></i>
+                <i class='bx bxl-facebook-circle' ></i>
+                <i class='bx bxl-instagram' ></i>
+                <i class='bx bxl-youtube' ></i></span></a>
+
+            <h1 class="text-[2rem] text-black pt-8">GLOWING</h1>
+                <div class="flex justify-center ">
+            <img src="img/pay.png" class="h-15 pt-8 ">
+        </div>
+        </footer>
+    </section>
+    
+   <!-- JavaScript -->
+<script>
+    function openNav() {
+        document.getElementById('sideNav').classList.remove('-translate-x-full');
+    }
+    function closeNav() {
+        document.getElementById('sideNav').classList.add('-translate-x-full');
+    }
+</script>
+    
+</body>
+</html
